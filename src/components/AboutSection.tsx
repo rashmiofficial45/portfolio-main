@@ -31,22 +31,22 @@ const AboutSection = () => {
     ];
 
     const experience = [
+        // {
+        //     year: '2023',
+        //     title: 'Senior Full Stack Developer',
+        //     company: 'TechCorp Inc.',
+        //     description: 'Leading development of scalable web applications using React, Node.js, and AWS.',
+        // },
+        // {
+        //     year: '2021',
+        //     title: 'Frontend Developer',
+        //     company: 'StartupXYZ',
+        //     description: 'Built responsive user interfaces and improved application performance by 40%.',
+        // },
         {
             year: '2023',
-            title: 'Senior Full Stack Developer',
-            company: 'TechCorp Inc.',
-            description: 'Leading development of scalable web applications using React, Node.js, and AWS.',
-        },
-        {
-            year: '2021',
-            title: 'Frontend Developer',
-            company: 'StartupXYZ',
-            description: 'Built responsive user interfaces and improved application performance by 40%.',
-        },
-        {
-            year: '2019',
-            title: 'Junior Developer',
-            company: 'WebSolutions',
+            title: 'Full Stack Developer',
+            company: 'Accenture',
             description: 'Started my journey in web development, focusing on JavaScript and React.',
         },
     ];

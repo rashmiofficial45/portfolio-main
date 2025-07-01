@@ -53,19 +53,19 @@ const ContactSection = () => {
         {
             icon: Mail,
             label: 'Email',
-            value: 'john.doe@example.com',
-            href: 'mailto:john.doe@example.com',
+            value: 'rashmiofficial45@gmail.com',
+            href: '#',
         },
         {
             icon: Phone,
             label: 'Phone',
-            value: '+1 (555) 123-4567',
-            href: 'tel:+15551234567',
+            value: '+91 6370984679',
+            href: '#',
         },
         {
             icon: MapPin,
             label: 'Location',
-            value: 'San Francisco, CA',
+            value: 'Bhubaneswar',
             href: 'https://maps.google.com',
         },
     ];
@@ -257,25 +257,6 @@ const ContactSection = () => {
                                 ))}
                             </div>
                         </div>
-
-                        {/* Availability Status */}
-                        <motion.div
-                            className="p-6 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-lg border border-green-500/20"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
-                            viewport={{ once: true }}
-                        >
-                            <div className="flex items-center space-x-3">
-                                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                                <div>
-                                    <p className="font-medium text-green-700 dark:text-green-400">Available for Projects</p>
-                                    <p className="text-sm text-muted-foreground">
-                                        Currently accepting new projects for Q2 2024
-                                    </p>
-                                </div>
-                            </div>
-                        </motion.div>
                     </motion.div>
                 </div>
             </div>

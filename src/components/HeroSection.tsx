@@ -58,8 +58,8 @@ const HeroSection = () => {
                             transition={{ duration: 0.6, delay: 0.4 }}
                         >
                             <span className="text-primary font-medium text-lg">Hello, I'm</span>
-                            <h1 className="text-4xl md:text-6xl font-bold mt-2 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                                John Doe
+                            <h1 className="text-3xl md:text-5xl font-bold mt-2 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                                Rashmi Ranjan Parija
                             </h1>
                         </motion.div>
 
@@ -69,7 +69,7 @@ const HeroSection = () => {
                             transition={{ duration: 0.6, delay: 0.6 }}
                         >
                             <h2 className="text-xl md:text-2xl text-muted-foreground font-medium">
-                                Full Stack Developer & UI/UX Designer
+                                Full Stack Developer
                             </h2>
                         </motion.div>
 
@@ -91,8 +91,10 @@ const HeroSection = () => {
                             transition={{ duration: 0.6, delay: 1 }}
                         >
                             <Button size="lg" className="group">
-                                <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
-                                Download CV
+                                <div className=''>
+                                    <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                                    Download CV
+                                </div>
                             </Button>
                             <Button variant="outline" size="lg" onClick={scrollToAbout}>
                                 View My Work
