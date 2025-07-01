@@ -25,6 +25,7 @@ const HeroSection = () => {
         document.body.appendChild(el)
         el.click()
     }
+    const email = 'rashmiofficial45@gmail.com'
 
     return (
         <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -118,9 +119,9 @@ const HeroSection = () => {
                             transition={{ duration: 0.6, delay: 1.2 }}
                         >
                             {[
-                                { Icon: Github, href: 'https://github.com' },
-                                { Icon: Linkedin, href: 'https://linkedin.com' },
-                                { Icon: Mail, href: 'mailto:john@example.com' },
+                                { Icon: Github, href: 'https://github.com/rashmiofficial45' },
+                                { Icon: Linkedin, href: 'https://www.linkedin.com/in/rashmi-ranjan-parija-19b5a5260/' },
+                                { Icon: Mail, href: `https://mail.google.com/mail/u/0/?view=cm&tf=cm&to=${email}` },
                             ].map(({ Icon, href }, index) => (
                                 <motion.a
                                     key={index}

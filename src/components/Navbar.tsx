@@ -61,7 +61,7 @@ const Navbar = () => {
                     whileTap={{ scale: 0.95 }}
                 >
                     <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                        JD
+                        RP
                     </Link>
                 </motion.div>
 
