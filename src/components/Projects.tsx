@@ -15,24 +15,23 @@ const ProjectsSection = () => {
     const projects = [
         {
             id: 1,
-            title: 'E-Commerce Platform',
-            description: 'A full-stack e-commerce solution with advanced features including real-time inventory, payment processing, and admin dashboard.',
+            title: 'LMS WITH ADMIN DASHBOARD',
+            description: 'CMS-driven LMS using Next.js, Sanity, and Clerk — enabling content creators to publish courses in just a few clicks without developer intervention.',
             image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg',
             category: 'fullstack',
-            technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe', 'Tailwind CSS'],
-            github: 'https://github.com',
-            live: 'https://example.com',
+            technologies: ['Next.js', 'TypeScript', 'Sanity', 'Stripe', 'Tailwind CSS','Clerk'],
+            github: 'https://github.com/rashmiofficial45/LMS-Platform',
+            live: 'https://lms-platform-gamma-one.vercel.app/',
             featured: true,
         },
         {
             id: 2,
-            title: 'Task Management App',
-            description: 'A collaborative task management application with real-time updates, team collaboration, and advanced filtering.',
+            title: 'FILE-STORE APP WITH REAL-TIME FILE SYNC',
+            description: 'A multi‑tenant file storage solution in Next.js, Convex, and Clerk, based on RBAC(Role Based Access Control) and storing 3 types of file(Image, PDF , CSV)',
             image: 'https://images.pexels.com/photos/3729557/pexels-photo-3729557.jpeg',
-            category: 'frontend',
-            technologies: ['React', 'Firebase', 'Material-UI', 'Redux'],
-            github: 'https://github.com',
-            live: 'https://example.com',
+            category: 'fullstack',
+            technologies: ['Next', 'Convex', 'Shadcn', 'Clerk'],
+            github: 'https://github.com/rashmiofficial45/file-storage-app',
             featured: true,
         },
         {
@@ -86,7 +85,6 @@ const ProjectsSection = () => {
         { id: 'fullstack', label: 'Full Stack' },
         { id: 'frontend', label: 'Frontend' },
         { id: 'backend', label: 'Backend' },
-        { id: 'mobile', label: 'Mobile' },
     ];
 
     const filteredProjects = selectedCategory === 'all'
@@ -105,47 +103,13 @@ const ProjectsSection = () => {
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects</h2>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                         A showcase of my recent work and personal projects
                     </p>
                 </motion.div>
 
                 <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-                    {/* Category Filter */}
-                    <motion.div
-                        className="flex justify-center mb-12"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        viewport={{ once: true }}
-                    >
-                        <TabsList className="grid grid-cols-5 w-full max-w-md">
-                            {categories.map((category) => (
-                                <TabsTrigger key={category.id} value={category.id} className="text-sm">
-                                    {category.label}
-                                </TabsTrigger>
-                            ))}
-                        </TabsList>
-                    </motion.div>
-
-                    {/* Featured Projects Highlight */}
-                    {selectedCategory === 'all' && (
-                        <motion.div
-                            className="mb-16"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
-                            viewport={{ once: true }}
-                        >
-                            <h3 className="text-2xl font-semibold mb-8 text-center">Featured Work</h3>
-                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {featuredProjects.slice(0, 3).map((project, index) => (
-                                    <ProjectCard key={project.id} project={project} index={index} featured />
-                                ))}
-                            </div>
-                        </motion.div>
-                    )}
 
                     {/* All Projects Grid */}
                     <TabsContent value={selectedCategory} className="mt-0">
