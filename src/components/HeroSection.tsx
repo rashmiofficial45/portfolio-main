@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Download, Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
-
 const HeroSection = () => {
     const scrollToAbout = () => {
         const aboutSection = document.querySelector('#about');
@@ -13,6 +12,19 @@ const HeroSection = () => {
             aboutSection.scrollIntoView({ behavior: 'smooth' });
         }
     };
+    const scrollToProjects = () => {
+        const aboutSection = document.querySelector('#projects');
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+    const handleDownload = () => {
+        const el = document.createElement("a")
+        el.href = "/resume.pdf"
+        el.download = "Rashmi_Resume.pdf"
+        document.body.appendChild(el)
+        el.click()
+    }
 
     return (
         <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -90,13 +102,11 @@ const HeroSection = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 1 }}
                         >
-                            <Button size="lg" className="group">
-                                <div className=''>
+                            <Button size="lg" onClick={handleDownload} className="group">
                                     <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
                                     Download CV
-                                </div>
                             </Button>
-                            <Button variant="outline" size="lg" onClick={scrollToAbout}>
+                            <Button variant="outline" size="lg" onClick={scrollToProjects}>
                                 View My Work
                             </Button>
                         </motion.div>

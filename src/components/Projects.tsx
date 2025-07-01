@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent} from '@/components/ui/tabs';
 import { ExternalLink, Github, Eye } from 'lucide-react';
 
 const ProjectsSection = () => {
@@ -22,7 +22,6 @@ const ProjectsSection = () => {
             technologies: ['Next.js', 'TypeScript', 'Sanity', 'Stripe', 'Tailwind CSS','Clerk'],
             github: 'https://github.com/rashmiofficial45/LMS-Platform',
             live: 'https://lms-platform-gamma-one.vercel.app/',
-            featured: true,
         },
         {
             id: 2,
@@ -32,66 +31,54 @@ const ProjectsSection = () => {
             category: 'fullstack',
             technologies: ['Next', 'Convex', 'Shadcn', 'Clerk'],
             github: 'https://github.com/rashmiofficial45/file-storage-app',
-            featured: true,
         },
         {
             id: 3,
-            title: 'Weather Dashboard',
-            description: 'A beautiful weather dashboard with detailed forecasts, interactive maps, and location-based recommendations.',
+            title: 'Excalidraw App',
+            description: "An Excalidraw like app to see the functionality of canvas with zoom and draw features",
             image: 'https://images.pexels.com/photos/1162251/pexels-photo-1162251.jpeg',
-            category: 'frontend',
-            technologies: ['Vue.js', 'Chart.js', 'OpenWeather API', 'SCSS'],
-            github: 'https://github.com',
-            live: 'https://example.com',
-            featured: false,
-        },
-        {
-            id: 4,
-            title: 'API Gateway Service',
-            description: 'A scalable microservices API gateway with authentication, rate limiting, and comprehensive monitoring.',
-            image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg',
-            category: 'backend',
-            technologies: ['Node.js', 'Docker', 'Redis', 'PostgreSQL', 'JWT'],
-            github: 'https://github.com',
-            live: 'https://example.com',
-            featured: false,
-        },
-        {
-            id: 5,
-            title: 'Social Media Analytics',
-            description: 'A comprehensive analytics platform for social media management with detailed insights and reporting.',
-            image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg',
             category: 'fullstack',
-            technologies: ['Python', 'Django', 'React', 'D3.js', 'PostgreSQL'],
-            github: 'https://github.com',
-            live: 'https://example.com',
-            featured: true,
+            technologies: ['Nodejs', 'NextJs', 'Websocket', 'zod'],
+            github: 'https://github.com/rashmiofficial45/Excalidraw-app',
         },
-        {
-            id: 6,
-            title: 'Mobile Banking App',
-            description: 'A secure mobile banking application with biometric authentication and real-time transaction processing.',
-            image: 'https://images.pexels.com/photos/164501/pexels-photo-164501.jpeg',
-            category: 'mobile',
-            technologies: ['React Native', 'Node.js', 'MongoDB', 'AWS', 'Plaid API'],
-            github: 'https://github.com',
-            live: 'https://example.com',
-            featured: false,
-        },
-    ];
-
-    const categories = [
-        { id: 'all', label: 'All Projects' },
-        { id: 'fullstack', label: 'Full Stack' },
-        { id: 'frontend', label: 'Frontend' },
-        { id: 'backend', label: 'Backend' },
+        // {
+        //     id: 4,
+        //     title: 'API Gateway Service',
+        //     description: 'A scalable microservices API gateway with authentication, rate limiting, and comprehensive monitoring.',
+        //     image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg',
+        //     category: 'backend',
+        //     technologies: ['Node.js', 'Docker', 'Redis', 'PostgreSQL', 'JWT'],
+        //     github: 'https://github.com',
+        //     live: 'https://example.com',
+        //     featured: false,
+        // },
+        // {
+        //     id: 5,
+        //     title: 'Social Media Analytics',
+        //     description: 'A comprehensive analytics platform for social media management with detailed insights and reporting.',
+        //     image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg',
+        //     category: 'fullstack',
+        //     technologies: ['Python', 'Django', 'React', 'D3.js', 'PostgreSQL'],
+        //     github: 'https://github.com',
+        //     live: 'https://example.com',
+        //     featured: true,
+        // },
+        // {
+        //     id: 6,
+        //     title: 'Mobile Banking App',
+        //     description: 'A secure mobile banking application with biometric authentication and real-time transaction processing.',
+        //     image: 'https://images.pexels.com/photos/164501/pexels-photo-164501.jpeg',
+        //     category: 'mobile',
+        //     technologies: ['React Native', 'Node.js', 'MongoDB', 'AWS', 'Plaid API'],
+        //     github: 'https://github.com',
+        //     live: 'https://example.com',
+        //     featured: false,
+        // },
     ];
 
     const filteredProjects = selectedCategory === 'all'
         ? projects
         : projects.filter(project => project.category === selectedCategory);
-
-    const featuredProjects = projects.filter(project => project.featured);
 
     return (
         <section id="projects" className="py-20">
