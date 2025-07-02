@@ -51,7 +51,7 @@ const HeroSection = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
                     <span className="text-primary font-medium text-lg">
-                        Hello, I'm
+                        Hello, I&apos;m
                     </span>
                     <h1 className="text-4xl md:text-6xl font-bold mt-2 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
                         Rashmi Ranjan Parija

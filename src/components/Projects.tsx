@@ -8,6 +8,16 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent} from '@/components/ui/tabs';
 import { ExternalLink, Github, Eye } from 'lucide-react';
+interface Project {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    category: string;
+    technologies: string[];
+    github: string;
+    live?: string; // ✅ make live optional
+  }
 
 const ProjectsSection = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -41,39 +51,6 @@ const ProjectsSection = () => {
             technologies: ['Nodejs', 'NextJs', 'Websocket', 'zod'],
             github: 'https://github.com/rashmiofficial45/Excalidraw-app',
         },
-        // {
-        //     id: 4,
-        //     title: 'API Gateway Service',
-        //     description: 'A scalable microservices API gateway with authentication, rate limiting, and comprehensive monitoring.',
-        //     image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg',
-        //     category: 'backend',
-        //     technologies: ['Node.js', 'Docker', 'Redis', 'PostgreSQL', 'JWT'],
-        //     github: 'https://github.com',
-        //     live: 'https://example.com',
-        //     featured: false,
-        // },
-        // {
-        //     id: 5,
-        //     title: 'Social Media Analytics',
-        //     description: 'A comprehensive analytics platform for social media management with detailed insights and reporting.',
-        //     image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg',
-        //     category: 'fullstack',
-        //     technologies: ['Python', 'Django', 'React', 'D3.js', 'PostgreSQL'],
-        //     github: 'https://github.com',
-        //     live: 'https://example.com',
-        //     featured: true,
-        // },
-        // {
-        //     id: 6,
-        //     title: 'Mobile Banking App',
-        //     description: 'A secure mobile banking application with biometric authentication and real-time transaction processing.',
-        //     image: 'https://images.pexels.com/photos/164501/pexels-photo-164501.jpeg',
-        //     category: 'mobile',
-        //     technologies: ['React Native', 'Node.js', 'MongoDB', 'AWS', 'Plaid API'],
-        //     github: 'https://github.com',
-        //     live: 'https://example.com',
-        //     featured: false,
-        // },
     ];
 
     const filteredProjects = selectedCategory === 'all'
@@ -122,7 +99,7 @@ const ProjectsSection = () => {
 };
 
 const ProjectCard = ({ project, index, featured = false }: {
-    project: any;
+    project: Project;
     index: number;
     featured?: boolean;
 }) => {

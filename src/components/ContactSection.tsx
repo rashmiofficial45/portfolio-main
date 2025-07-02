@@ -4,8 +4,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
 
 const ContactSection = () => {
