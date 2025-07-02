@@ -23,7 +23,7 @@ const Footer = () => {
                         viewport={{ once: true }}
                     >
                         <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                            John Doe
+                            Rashmi Ranjan Parija
                         </h3>
                         <p className="text-muted-foreground max-w-md">
                             Full Stack Developer passionate about creating exceptional digital experiences
@@ -73,9 +73,9 @@ const Footer = () => {
                     >
                         <h4 className="font-semibold">Get in Touch</h4>
                         <div className="space-y-2 text-muted-foreground">
-                            <p>john.doe@example.com</p>
-                            <p>+1 (555) 123-4567</p>
-                            <p>San Francisco, CA</p>
+                            <p>rashmiofficial45@gmail.com</p>
+                            <p>+91 6370984679</p>
+                            <p>Bhubaneswar</p>
                         </div>
                     </motion.div>
                 </div>
@@ -89,7 +89,7 @@ const Footer = () => {
                     viewport={{ once: true }}
                 >
                     <div className="flex items-center space-x-1 text-muted-foreground text-sm mb-4 md:mb-0">
-                        <span>© 2024 John Doe. Made with</span>
+                        <span>© 2025 Rashmi Ranjan Parija. Made with</span>
                         <Heart className="w-4 h-4 text-red-500" />
                         <span>and lots of coffee</span>
                     </div>

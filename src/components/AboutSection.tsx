@@ -31,18 +31,6 @@ const AboutSection = () => {
     ];
 
     const experience = [
-        // {
-        //     year: '2023',
-        //     title: 'Senior Full Stack Developer',
-        //     company: 'TechCorp Inc.',
-        //     description: 'Leading development of scalable web applications using React, Node.js, and AWS.',
-        // },
-        // {
-        //     year: '2021',
-        //     title: 'Frontend Developer',
-        //     company: 'StartupXYZ',
-        //     description: 'Built responsive user interfaces and improved application performance by 40%.',
-        // },
         {
             year: '2023',
             title: 'Full Stack Developer',
@@ -87,12 +75,10 @@ const AboutSection = () => {
                                 real-world problems.
                             </p>
                             <p>
-                                Over the years, I've had the privilege of working with diverse teams on
-                                projects ranging from e-commerce platforms to complex enterprise applications.
-                                I'm constantly learning and adapting to new technologies and methodologies.
+                                Collaborating closely with cross-functional teams, I’ve honed my skills in everything from UI architecture to backend integrations and deployment pipelines. I care deeply about code quality, performance optimization (e.g. SSR, indexing, caching), and secure authentication flows.
                             </p>
                             <p>
-                                When I'm not coding, you can find me exploring new design trends,
+                                Outside coding, you can find me exploring new design trends,
                                 contributing to open-source projects, or sharing knowledge with the developer community.
                             </p>
                         </div>
