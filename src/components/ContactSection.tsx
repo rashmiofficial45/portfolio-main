@@ -32,8 +32,8 @@ const ContactSection = () => {
 
 const socialLinks = [
     { icon: Github, label: 'GitHub', href: 'https://github.com/rashmiofficial45' },
-    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/rashmi-ranjan-parija-19b5a5260/' },
-    { icon: Twitter, label: 'Twitter', href: 'https://twitter.com' },
+    { icon: Linkedin, label: 'LinkedIn', href: 'www.linkedin.com/in/rashmi-ranjan-parija' },
+    { icon: Twitter, label: 'Twitter', href: 'https://x.com/RashmiRaPari264' },
 ];
 
     return (

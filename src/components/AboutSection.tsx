@@ -33,9 +33,10 @@ const AboutSection = () => {
     const experience = [
         {
             year: '2023',
-            title: 'Full Stack Developer',
+            title: 'Associate Software Engineer',
             company: 'Accenture',
-            description: 'Started my journey in web development, focusing on JavaScript and React.',
+            description:
+                'Contributed to enterprise-grade applications using React and Node.js. Collaborated closely with cross-functional teams, implemented API integrations, improved app performance, and followed Agile practices to iterate quickly and reliably.',
         },
     ];
 
@@ -84,7 +85,7 @@ const AboutSection = () => {
                         </div>
 
                         <div className="flex flex-wrap gap-2 pt-4">
-                            {['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Python', 'AWS'].map((tech) => (
+                            {['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Express', 'AWS'].map((tech) => (
                                 <Badge key={tech} variant="secondary" className="text-sm">
                                     {tech}
                                 </Badge>

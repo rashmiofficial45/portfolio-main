@@ -9,7 +9,7 @@ const SkillsSection = () => {
     const technologies = [
         'JavaScript', 'TypeScript', 'React', 'Next.js', 'AWS', 'Node.js',
         'Shadcn', 'PostgreSQL', 'MongoDB', 'AWS', 'Docker', 'Kubernetes',
-        'Tailwind CSS', 'SASS', 'GraphQL', 'REST APIs', 'Git', 'Figma',
+        'Tailwind CSS', 'SASS', 'GraphQL', 'REST APIs', 'Git', 'Redis',
         'Redux', 'Zustand', 'Recoil'
     ];
 
