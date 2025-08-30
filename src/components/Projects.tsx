@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ExternalLink, Github, Eye } from "lucide-react";
+import { Github, Eye } from "lucide-react";
 
 interface Project {
     id: number;
@@ -201,7 +201,7 @@ const ProjectCard = ({
                     >
                         {/* parent controls stagger for a pleasant micro-interaction */}
                         <AnimatePresence initial={false}>
-                            {visibleTechnologies.map((tech, idx) => (
+                            {visibleTechnologies.map((tech) => (
                                 <motion.span
                                     key={tech}
                                     layout
