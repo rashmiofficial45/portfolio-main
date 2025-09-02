@@ -66,20 +66,20 @@ const ProjectsSection = () => {
                         A showcase of my recent work and personal projects
                     </p>
                 </motion.div>
-                    {/* One content area bound to current value */}
-                        <AnimatePresence mode="wait">
-                            <motion.div
-                                className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.25 }}
-                            >
-                            {projects.map((project, index) => (
-                                    <ProjectCard key={project.id} project={project} index={index} />
-                                ))}
-                            </motion.div>
-                        </AnimatePresence>
+                {/* One content area bound to current value */}
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.25 }}
+                    >
+                        {projects.map((project, index) => (
+                            <ProjectCard key={project.id} project={project} index={index} />
+                        ))}
+                    </motion.div>
+                </AnimatePresence>
             </div>
         </section>
     );
