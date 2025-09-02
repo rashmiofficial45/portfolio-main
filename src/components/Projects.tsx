@@ -14,7 +14,6 @@ interface Project {
     title: string;
     description: string;
     image: string;
-    category: string;
     technologies: string[];
     github: string;
     live?: string; // optional
@@ -28,7 +27,6 @@ const ProjectsSection = () => {
             description:
                 "CMS-driven LMS using Next.js, Sanity, and Clerk — enabling content creators to publish courses in just a few clicks without developer intervention.",
             image: "/lms.png",
-            category: "fullstack",
             technologies: ["Next.js", "TypeScript", "Sanity", "Stripe", "Tailwind CSS", "Clerk"],
             github: "https://github.com/rashmiofficial45/LMS-Platform",
             live: "https://lms-platform-gamma-one.vercel.app/",
@@ -39,7 +37,6 @@ const ProjectsSection = () => {
             description:
                 "A multi-tenant file storage solution in Next.js, Convex, and Clerk, based on RBAC(Role Based Access Control) and storing 3 types of file(Image, PDF , CSV)",
             image: "/file-store.png",
-            category: "fullstack",
             technologies: ["Next", "Convex", "Shadcn", "Clerk"],
             github: "https://github.com/rashmiofficial45/file-storage-app",
             live: "https://file-storage-app-nine.vercel.app/"
@@ -50,20 +47,10 @@ const ProjectsSection = () => {
             description:
                 "An Excalidraw like app to see the functionality of canvas with zoom and draw features",
             image: "/icon.webp",
-            category: "fullstack",
             technologies: ["Nodejs", "NextJs", "Websocket", "zod"],
             github: "https://github.com/rashmiofficial45/Excalidraw-app",
         },
     ];
-
-    // categories → dynamic & future-proof
-    const categories = Array.from(new Set(["all", ...projects.map((p) => p.category)]));
-    const [selectedCategory, setSelectedCategory] = useState<string>("all");
-
-    const filteredProjects =
-        selectedCategory === "all"
-            ? projects
-            : projects.filter((project) => project.category === selectedCategory);
 
     return (
         <section id="projects" className="py-20">
@@ -80,35 +67,20 @@ const ProjectsSection = () => {
                         A showcase of my recent work and personal projects
                     </p>
                 </motion.div>
-
-                <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-                    {/* Optional: Dynamic Category Filters */}
-                    <TabsList className="mb-6 flex flex-wrap gap-2">
-                        {categories.map((cat) => (
-                            <TabsTrigger key={cat} value={cat} className="capitalize">
-                                {cat}
-                            </TabsTrigger>
-                        ))}
-                    </TabsList>
-
                     {/* One content area bound to current value */}
-                    <TabsContent value={selectedCategory} className="mt-0">
                         <AnimatePresence mode="wait">
                             <motion.div
-                                key={selectedCategory}
                                 className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.25 }}
                             >
-                                {filteredProjects.map((project, index) => (
+                            {projects.map((project, index) => (
                                     <ProjectCard key={project.id} project={project} index={index} />
                                 ))}
                             </motion.div>
                         </AnimatePresence>
-                    </TabsContent>
-                </Tabs>
             </div>
         </section>
     );

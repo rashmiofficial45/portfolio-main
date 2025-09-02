@@ -98,7 +98,7 @@ const HeroSection = () => {
                 >
                     {[
                         { Icon: Github, href: 'https://github.com/rashmiofficial45' },
-                        { Icon: Linkedin, href: 'https://www.linkedin.com/in/rashmi-ranjan-parija-19b5a5260/' },
+                        { Icon: Linkedin, href: 'https://www.linkedin.com/in/rashmi-ranjan-parija/' },
                         { Icon: Mail, href: `mailto:${email}` },
                     ].map(({ Icon, href }, idx) => (
                         <motion.a
