@@ -16,7 +16,7 @@ const HeroSection = () => {
     };
     const handleDownload = () => {
         const el = document.createElement('a');
-        el.href = '/resume.pdf';
+        el.href = '/resume2.pdf';
         el.download = 'Rashmi_Resume.pdf';
         document.body.appendChild(el);
         el.click();
